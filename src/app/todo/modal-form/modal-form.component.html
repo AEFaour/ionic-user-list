@@ -1,0 +1,21 @@
+<ion-header>
+
+    <ion-toolbar>
+        <ion-title>Formulaire des tâches</ion-title>
+        <ion-buttons slot="end">
+            <ion-button (click)="validateForm()">Ok</ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <ion-list>
+        <ion-item>
+            <ion-label position="stacked">Nom de la Tâche</ion-label>
+            <ion-input type="text" [(ngModel)]="task.taskName"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-checkbox slot="start" [(ngModel)]="task.done"></ion-checkbox>
+            <ion-label>Déjà fait</ion-label>
+        </ion-item>
+    </ion-list>
+</ion-content>

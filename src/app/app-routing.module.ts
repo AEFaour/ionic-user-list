@@ -14,6 +14,14 @@ const routes: Routes = [
   {
     path: 'list',
     loadChildren: () => import('./list/list.module').then(m => m.ListPageModule)
+  },
+  {
+    path: 'todo-list',
+    loadChildren: () => import('./todo/todo-list/todo-list.module').then( m => m.TodoListPageModule)
+  },
+  {
+    path: 'user-list',
+    loadChildren: () => import('./user-list/user-list.module').then( m => m.UserListPageModule)
   }
 ];
 

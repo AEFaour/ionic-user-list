@@ -8,14 +8,19 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { ModalFormComponent } from './todo/modal-form/modal-form.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-  declarations: [AppComponent],
-  entryComponents: [],
+  declarations: [AppComponent, ModalFormComponent],
+  entryComponents: [ModalFormComponent],
   imports: [
     BrowserModule,
     IonicModule.forRoot(),
-    AppRoutingModule
+    AppRoutingModule, 
+    FormsModule,
+    HttpClientModule
   ],
   providers: [
     StatusBar,
